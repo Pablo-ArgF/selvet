@@ -16,7 +16,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <div className="logo-container mb-4">
-              <img src="/logo.png" alt="Selvet Logo" className="logo" style={{ filter: 'brightness(0) invert(1)' }} />
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Selvet Logo" className="logo" style={{ filter: 'brightness(0) invert(1)' }} />
               <span className="logo-text" style={{ color: 'white' }}>Selvet</span>
             </div>
             <p className="footer-desc">

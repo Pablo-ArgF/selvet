@@ -51,7 +51,7 @@ const Navbar = () => {
     >
       <div className="container nav-container">
         <a href="#home" className="logo-container">
-          <img src="/logo.png" alt="Selvet Logo" className="logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Selvet Logo" className="logo" />
           <span className="logo-text">Selvet</span>
         </a>
 

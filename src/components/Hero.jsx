@@ -19,7 +19,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <img src="/logo.png" alt="Selvet Logo" className="hero-logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Selvet Logo" className="hero-logo" />
         </motion.div>
 
         <motion.h1
@@ -38,7 +38,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          Cuidamos de tus mascotas con la mejor tecnología y el equipo más preparado en Asturias.
+          Cuidamos de tus mascotas con la mejor tecnología.
         </motion.p>
 
         <motion.div
@@ -81,8 +81,8 @@ const Hero = () => {
         style={{ y: useTransform(scrollY, [0, 500], [0, -170]) }}
       />
       <motion.img
-        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80"
-        alt="Gato"
+        src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=400&q=80"
+        alt="Oveja"
         className="floating-animal animal-cat"
         initial={{ opacity: 0, scale: 0, rotate: 10 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -108,22 +108,22 @@ const Hero = () => {
         style={{ y: useTransform(scrollY, [0, 500], [0, -40]) }}
       />
       <motion.img
-        src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=400&q=80"
-        alt="Oveja"
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80"
+        alt="Gato"
         className="floating-animal animal-sheep"
-        initial={{ opacity: 0, scale: 0, rotate: 8 }}
+        initial={{ opacity: 0, scale: 0, rotate: -8 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ duration: 1, delay: 1.5, type: "spring" }}
-        style={{ y: useTransform(scrollY, [0, 500], [0, 110]) }}
+        transition={{ duration: 1, delay: 1.7, type: "spring" }}
+        style={{ y: useTransform(scrollY, [0, 500], [0, 70]) }}
       />
       <motion.img
         src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=400&q=80"
         alt="Gato 2"
         className="floating-animal animal-cat2"
-        initial={{ opacity: 0, scale: 0, rotate: -8 }}
+        initial={{ opacity: 0, scale: 0, rotate: 8 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ duration: 1, delay: 1.7, type: "spring" }}
-        style={{ y: useTransform(scrollY, [0, 500], [0, 70]) }}
+        transition={{ duration: 1, delay: 1.5, type: "spring" }}
+        style={{ y: useTransform(scrollY, [0, 500], [0, 110]) }}
       />
     </section>
   );
