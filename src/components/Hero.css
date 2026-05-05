@@ -1,0 +1,151 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.hero-content {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 250px;
+  max-width: 60vw;
+  height: auto;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-actions .glass {
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.floating-animal {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border: 4px solid var(--glass-bg);
+  background-color: white;
+}
+
+.animal-cat2 {
+  top: 15%;
+  left: 8%;
+  width: 12vw;
+  height: 12vw;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.animal-horse {
+  top: 45%;
+  left: 5%;
+  width: 16vw;
+  height: 16vw;
+  max-width: 160px;
+  max-height: 160px;
+}
+
+.animal-dog {
+  bottom: 15%;
+  left: 12%;
+  width: 22vw;
+  height: 22vw;
+  max-width: 220px;
+  max-height: 220px;
+}
+
+.animal-sheep {
+  top: 12%;
+  right: 25%;
+  width: 13vw;
+  height: 13vw;
+  max-width: 130px;
+  max-height: 130px;
+}
+
+.animal-cow {
+  top: 30%;
+  left: 20%;
+  width: 22vw;
+  height: 22vw;
+  max-width: 220px;
+  max-height: 220px;
+  object-position: center 20%;
+}
+
+.animal-rabbit {
+  top: 60%;
+  right: 5%;
+  width: 14vw;
+  height: 14vw;
+  max-width: 140px;
+  max-height: 140px;
+  object-position: center 30%;
+}
+
+.animal-cat {
+  bottom: 15%;
+  right: 18%;
+  width: 18vw;
+  height: 18vw;
+  max-width: 180px;
+  max-height: 180px;
+}
+
+@media (max-width: 768px) {
+  .floating-animal {
+    opacity: 0.15 !important;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+}
