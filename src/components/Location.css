@@ -89,3 +89,23 @@
   color: var(--emergency);
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .location-header {
+    margin-bottom: 2rem;
+  }
+  .schedule-container {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  .map-container {
+    min-height: 250px;
+    border-radius: 20px;
+  }
+  .schedule-list {
+    gap: 1rem;
+  }
+  .schedule-list li {
+    font-size: 1rem;
+  }
+}

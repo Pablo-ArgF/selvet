@@ -56,3 +56,18 @@
   font-weight: 600;
   color: var(--text-primary);
 }
+
+@media (max-width: 768px) {
+  .services-header {
+    margin-bottom: 2rem;
+  }
+  .service-card {
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+  .service-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+  }
+}

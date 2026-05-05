@@ -143,9 +143,9 @@ ul {
 
 @media (max-width: 768px) {
   .section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
 }

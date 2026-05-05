@@ -81,3 +81,16 @@
   text-align: center;
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .footer-grid {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer-col {
+    max-width: 100%;
+  }
+  .footer-bottom {
+    padding-top: 1.5rem;
+  }
+}
