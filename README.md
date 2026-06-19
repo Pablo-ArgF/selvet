@@ -1,16 +1,27 @@
-# React + Vite
+# Selvet – Clínica Veterinaria Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live demo:** https://Pablo-ArgF.github.io/selvet/
 
-Currently, two official plugins are available:
+## Purpose
+A modern, responsive website for the Selvet veterinary clinic. It showcases services, installations, and contact information with smooth animations, dark‑mode support, and premium design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
+```bash
+git clone https://github.com/Pablo-ArgF/selvet.git
+cd selvet
+pnpm install
+pnpm run dev
+```
+Open `http://localhost:5173` in a browser.
 
-## React Compiler
+## Build & Deploy
+```bash
+pnpm run build   # creates the production bundle in ./dist
+pnpm run deploy  # publishes to GitHub Pages (uses gh-pages)
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+- Framer Motion carousel for installations
+- Smooth scroll navigation
+- Dark/light theme with CSS variables
+- Responsive layout for mobile & desktop

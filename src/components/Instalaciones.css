@@ -1,0 +1,209 @@
+/* =====================================================
+   Instalaciones Section
+   Layout (desktop): arrow | image | title+body | arrow
+   Layout (mobile):  image stacked above title+body
+   ===================================================== */
+
+.instalaciones-section {
+  position: relative;
+  background-color: var(--bg-primary);
+  padding: 2rem 0 3rem;
+  overflow: hidden;
+}
+
+/* Outer row: left-arrow | slide | right-arrow */
+.instalaciones-outer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/* ── Arrows ─────────────────────────────────────── */
+.inst-arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  z-index: 2;
+}
+
+.inst-arrow:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Slide (image + text) ────────────────────────── */
+.instalaciones-slide {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* equal halves; adjust below if needed */
+  gap: 2rem;
+  align-items: stretch;             /* make both columns same height */
+  min-height: 420px;
+}
+
+/* ── Image column ────────────────────────────────── */
+.inst-image-col {
+  width: 100%;
+  height: 100%;
+}
+
+.inst-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.inst-image:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Text column ─────────────────────────────────── */
+.inst-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+/* Title box */
+.inst-title-box {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.inst-counter {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.inst-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Body box */
+.inst-body-box {
+  flex: 1;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inst-body {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin: 0;
+  text-align: left;
+}
+
+/* Dots */
+.inst-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.inst-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border-color);
+  cursor: pointer;
+  padding-left: 0;
+  transition: all 0.35s ease;
+}
+
+.inst-dot.active {
+  width: 26px;
+  border-radius: 5px;
+  background: var(--accent);
+}
+
+/* ── Dark mode ───────────────────────────────────── */
+[data-theme='dark'] .inst-arrow {
+  background: var(--bg-secondary);
+}
+
+
+
+/* ── Responsive ──────────────────────────────────── */
+
+/* Slightly tighten on mid-sized screens */
+@media (max-width: 1100px) {
+  .instalaciones-slide {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    min-height: 380px;
+  }
+}
+
+/* Mobile: stack vertically, hide side arrows → use dots only */
+@media (max-width: 768px) {
+  .instalaciones-outer {
+    gap: 0.5rem;
+  }
+
+  .inst-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .instalaciones-slide {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    min-height: unset;
+  }
+
+  .inst-image {
+    max-height: 260px;
+    object-fit: cover;
+  }
+
+  .inst-text-col {
+    gap: 0.75rem;
+  }
+
+  .inst-title-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .inst-title {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+}

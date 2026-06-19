@@ -37,6 +37,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Inicio', href: '#home' },
     { name: 'Urgencias', href: '#emergency' },
+    { name: 'Instalaciones', href: '#instalaciones' },
     { name: 'Ubicación', href: '#info' },
     { name: 'Servicios', href: '#services' },
     { name: 'Contacto', href: '#contact' },
@@ -56,13 +57,21 @@ const Navbar = () => {
         </a>
 
         <div className="desktop-nav">
-          <ul className="nav-links">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a href={link.href}>{link.name}</a>
-              </li>
-            ))}
-          </ul>
+                      <ul className="nav-links">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <a href={link.href} onClick={(e) => {
+                    e.preventDefault();
+                    const id = link.href.replace('#', '');
+                    const el = document.getElementById(id);
+                    if (el) {
+                      const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // offset for navbar height
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  }}>{link.name}</a>
+                </li>
+              ))}
+            </ul>
           
           <button onClick={toggleTheme} className="theme-toggle-btn" aria-label="Toggle theme">
             {isDark ? <Sun size={20} /> : <Moon size={20} />}

@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Clínica Veterinaria Selvet. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Clínica Veterinaria Selvet. Todos los derechos reservados. <br/>Página web hecha por <a href="https://pabloaf.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline" }}>Pablo-ArgF</a>.</p>
         </div>
       </div>
     </footer>

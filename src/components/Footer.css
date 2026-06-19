@@ -65,10 +65,14 @@
 .footer-icon {
   color: var(--accent);
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .footer-list a {
   transition: color 0.3s ease;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .footer-list a:hover {
@@ -76,7 +80,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
@@ -87,9 +91,11 @@
     gap: 2rem;
     margin-bottom: 2.5rem;
   }
+
   .footer-col {
     max-width: 100%;
   }
+
   .footer-bottom {
     padding-top: 1.5rem;
   }
