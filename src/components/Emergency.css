@@ -51,6 +51,15 @@
   font-weight: 700;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   animation: none; /* Override standard pulse */
+  white-space: nowrap; /* Prevent line break */
+}
+  font-size: 1.2rem;
+  padding: 1.2rem 2.5rem;
+  background-color: white;
+  color: var(--emergency);
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: none; /* Override standard pulse */
 }
 
 .btn-large:hover {
