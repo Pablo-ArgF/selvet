@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Pablo-ArgF.github.io/selvet/",
+  "homepage": "https://selvet.vet/",
   "name": "selvet",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

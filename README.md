@@ -1,6 +1,6 @@
 # Selvet – Clínica Veterinaria Online
 
-**Live demo:** https://Pablo-ArgF.github.io/selvet/
+**Live demo:** https://selvet.vet/
 
 ## Purpose
 A modern, responsive website for the Selvet veterinary clinic. It showcases services, installations, and contact information with smooth animations, dark‑mode support, and premium design.
@@ -12,7 +12,7 @@ cd selvet
 pnpm install
 pnpm run dev
 ```
-Open `http://localhost:5173` in a browser.
+Open `http://localhost:5173/` in a browser.
 
 ## Build & Deploy
 ```bash

@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -14,10 +13,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Emergency />
-        <Instalaciones />
-        <Location />
         <Services />
+        <Instalaciones />
+        <Emergency />
+        <Location />
       </main>
       <Footer />
     </div>

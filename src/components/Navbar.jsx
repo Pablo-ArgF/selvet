@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Phone, Sun, Moon } from 'lucide-react';
 import './Navbar.css';
@@ -6,7 +6,10 @@ import './Navbar.css';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => (
+    typeof window !== 'undefined'
+      && window.matchMedia?.('(prefers-color-scheme: dark)').matches
+  ));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,15 +17,16 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll);
     
-    // Check initial theme
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDark(prefersDark);
-    if (prefersDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+  }, [isDark]);
 
   const toggleTheme = () => {
     if (isDark) {
@@ -36,10 +40,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Inicio', href: '#home' },
-    { name: 'Urgencias', href: '#emergency' },
-    { name: 'Instalaciones', href: '#instalaciones' },
-    { name: 'Ubicación', href: '#info' },
     { name: 'Servicios', href: '#services' },
+    { name: 'Instalaciones', href: '#instalaciones' },
+    { name: 'Urgencias', href: '#emergency' },
+    { name: 'Ubicación', href: '#info' },
     { name: 'Contacto', href: '#contact' },
   ];
 

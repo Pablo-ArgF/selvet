@@ -1,14 +1,38 @@
 [
   {
-    "id": "cat",
-    "image": "instalaciones/cat.png",
-    "title": "Instalación cat",
-    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum."
+    "id": "recepcion-tienda",
+    "images": ["instalaciones/recepcion-tienda.jpeg"],
+    "title": "Recepción y tienda especializada",
+    "body": "La zona de recepción cuenta con un espacio destinado a la venta de alimentación especializada para mascotas con diferentes patologías o necesidades nutricionales específicas. En esta área se ofrecen productos seleccionados para contribuir al cuidado y bienestar de los animales, como dietas veterinarias adaptadas a problemas digestivos, renales, urinarios, dermatológicos, obesidad u otras condiciones de salud."
   },
   {
-    "id": "cow",
-    "image": "instalaciones/cow.png",
-    "title": "Instalación cow",
-    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+    "id": "consultas",
+    "images": ["instalaciones/consultas-1.jpeg", "instalaciones/consultas-2.jpeg"],
+    "title": "Consultas veterinarias",
+    "body": "Disponemos de consultas diferenciadas para perros y gatos, con el objetivo de proporcionar un entorno más tranquilo y adecuado para cada especie. Esta separación permite reducir el estrés y la ansiedad de los animales, especialmente en el caso de los gatos, y facilita una atención veterinaria más adaptada a sus características y necesidades."
+  },
+  {
+    "id": "laboratorio",
+    "images": ["instalaciones/laboratorio.jpeg"],
+    "title": "Laboratorio",
+    "body": "Contamos con equipamiento para la realización de pruebas diagnósticas, dotado de microscopio y equipos específicos para hematología, bioquímica y urianálisis. Estas instalaciones permiten obtener resultados de forma rápida y fiable, facilitando el diagnóstico y seguimiento de diferentes patologías y contribuyendo a una atención veterinaria más eficiente."
+  },
+  {
+    "id": "diagnostico-imagen",
+    "images": ["instalaciones/diagnostico-imagen.jpeg"],
+    "title": "Área de diagnóstico por imagen",
+    "body": "El centro cuenta con una sala de diagnóstico por imagen equipada con equipo de radiología digital y ecógrafo, que permiten realizar estudios diagnósticos de forma rápida y precisa. Estas herramientas facilitan la evaluación de órganos, tejidos y estructuras internas, contribuyendo al diagnóstico y seguimiento de diversas patologías."
+  },
+  {
+    "id": "quirofano",
+    "images": ["instalaciones/quirofano.jpeg"],
+    "title": "Quirófano",
+    "body": "Nuestro quirófano cuenta con equipamiento necesario para llevar a cabo cirugías en condiciones adecuadas de asepsia, seguridad y monitorización, garantizando el bienestar del animal durante todo el procedimiento."
+  },
+  {
+    "id": "hospitalizacion",
+    "images": ["instalaciones/hospitalizacion.jpeg"],
+    "title": "Hospitalización",
+    "body": "Disponemos de un área de hospitalización especialmente acondicionada para aquellos animales que necesitan permanecer bajo observación o recibir cuidados veterinarios continuados. Cuidamos especialmente la limpieza, el confort y la tranquilidad durante su estancia."
   }
 ]

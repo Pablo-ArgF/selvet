@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import './Footer.css';
@@ -39,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <Mail size={20} className="footer-icon" />
-                <a href="mailto:cvselvet@gmail.com">cvselvet@gmail.com</a>
+                <a href="mailto:contacto@selvet.vet">contacto@selvet.vet</a>
               </li>
             </ul>
           </motion.div>

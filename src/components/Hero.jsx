@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import './Hero.css';
@@ -38,7 +37,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          Cuidamos de tus mascotas con la mejor tecnología.
+          Cuidamos de tus mascotas con cercanía, confianza y un trato personalizado.
         </motion.p>
 
         <motion.div

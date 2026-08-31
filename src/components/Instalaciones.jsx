@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import instalacionesData from './instalaciones.json';
@@ -27,8 +27,7 @@ const Instalaciones = () => {
   const [direction, setDirection] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
 
-  if (!instalacionesData || instalacionesData.length === 0) return null;
-  const total = instalacionesData.length;
+  const total = instalacionesData?.length ?? 0;
 
   const handleNext = () => {
     setDirection(1);
@@ -49,12 +48,19 @@ const Instalaciones = () => {
   // Autoplay – 12 seconds interval
   useEffect(() => {
     if (isPaused || total <= 1) return;
-    const id = setInterval(handleNext, 12000);
+    const id = setInterval(() => {
+      setDirection(1);
+      setActiveIndex((prev) => (prev + 1) % total);
+    }, 12000);
     return () => clearInterval(id);
-  }, [activeIndex, isPaused]);
+  }, [isPaused, total]);
+
+  if (total === 0) return null;
 
   const item = instalacionesData[activeIndex];
-  const imageSrc = (import.meta.env.BASE_URL || '/') + item.image;
+  const imageSources = (item.images ?? [item.image]).map(
+    (image) => (import.meta.env.BASE_URL || '/') + image,
+  );
 
   return (
     <section id="instalaciones" className="instalaciones-section section">
@@ -68,6 +74,14 @@ const Instalaciones = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="section-title">Nuestras Instalaciones</h2>
+          <div className="instalaciones-intro">
+            <p>
+              En nuestra clínica veterinaria hemos creado un espacio pensado para ofrecer a cada paciente una atención veterinaria profesional y un trato personalizado, procurando que tanto ellos como sus familias se sientan cómodos desde el primer momento.
+            </p>
+            <p>
+              Contamos con unas instalaciones modernas, funcionales y adaptadas a las necesidades de perros y gatos. Combinamos tecnología, higiene y bienestar para proporcionar una atención veterinaria de calidad.
+            </p>
+          </div>
         </motion.div>
 
         {/* Carousel with side arrows */}
@@ -100,7 +114,16 @@ const Instalaciones = () => {
             >
               {/* Image column (left) */}
               <div className="inst-image-col">
-                <img src={imageSrc} alt={item.title} className="inst-image" />
+                <div className={`inst-media${imageSources.length > 1 ? ' inst-media--multiple' : ''}`}>
+                  {imageSources.map((imageSrc, imageIndex) => (
+                    <img
+                      key={imageSrc}
+                      src={imageSrc}
+                      alt={`${item.title}${imageSources.length > 1 ? ` ${imageIndex + 1}` : ''}`}
+                      className="inst-image"
+                    />
+                  ))}
+                </div>
               </div>
 
               {/* Text column (right) */}
