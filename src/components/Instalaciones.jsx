@@ -128,11 +128,18 @@ const Instalaciones = () => {
 
               {/* Text column (right) */}
               <div className="inst-text-col">
-                {/* Title & counter */}
+                {/* Navigation dots and title */}
                 <div className="inst-title-box">
-                  <span className="inst-counter">
-                    {String(activeIndex + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
-                  </span>
+                  <div className="inst-dots">
+                    {instalacionesData.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => handleDotClick(i)}
+                        className={`inst-dot${i === activeIndex ? ' active' : ''}`}
+                        aria-label={`Instalación ${i + 1}`}
+                      />
+                    ))}
+                  </div>
                   <h3 className="inst-title">{item.title}</h3>
                 </div>
 
@@ -141,17 +148,6 @@ const Instalaciones = () => {
                   <p className="inst-body">{item.body}</p>
                 </div>
 
-                {/* Dots navigation */}
-                <div className="inst-dots">
-                  {instalacionesData.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => handleDotClick(i)}
-                      className={`inst-dot${i === activeIndex ? ' active' : ''}`}
-                      aria-label={`Instalación ${i + 1}`}
-                    />
-                  ))}
-                </div>
               </div>
             </motion.div>
           </AnimatePresence>

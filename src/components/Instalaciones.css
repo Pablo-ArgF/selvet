@@ -107,22 +107,13 @@
   height: 100%;
 }
 
-/* Title box */
+/* Navigation dots and title */
 .inst-title-box {
   padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.25rem;
-}
-
-.inst-counter {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
 }
 
 .inst-title {
@@ -227,6 +218,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+  }
+
+  .inst-dots {
+    align-self: center;
   }
 
   .inst-title {
